@@ -7,15 +7,8 @@ pipeline {
         PATH = "$VENV_PATH/bin:$PATH"
         SONARQUBE_SCANNER_HOME = tool name: 'SonarQube Scanner'
         SONARQUBE_TOKEN = 'squ_40d32dee2b3a5a9076feef1129d21aa2b5ccc088'  // Set your new SonarQube token here
-        DEPENDENCY_CHECK_HOME = '/var/jenkins_home/tools/owasp-dependency-check/org.jenkinsci.plugins.DependencyCheck.tools.DependencyCheckInstallation'
+        DEPENDENCY_CHECK_HOME = '/var/jenkins_home/tools/org.jenkinsci.plugins.DependencyCheck.tools.DependencyCheckInstallation/OWASP_Dependency-Check/dependency-check'
     }
-	<tool>
-  <org.jenkinsci.plugins.DependencyCheck.tools.DependencyCheckInstallation>
-    <name>OWASP_Dependency-Check</name>
-    <home>/var/jenkins_home/tools/owasp-dependency-check</home>
-    <properties/>
-  </org.jenkinsci.plugins.DependencyCheck.tools.DependencyCheckInstallation>
-</tool>
 
     
     stages {
